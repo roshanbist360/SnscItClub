@@ -460,7 +460,7 @@ body{
 	top: -30px;
 	left: 50%;
 	transform: translate(-50%);
-	background: url("images/president.JPG");
+	background: url("images/president.jpg");
 	background-size: cover;
 	border-radius: 6px;
 	box-shadow: 0 0 4px 2px #495AF260,0 0 10px 6px #495AF240;
