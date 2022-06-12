@@ -1,0 +1,901 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	background: #000;
+	color: #fff;
+}
+
+:root{
+	font-size: 16px;
+    --primary-font: 'Raleway', sans-serif;
+    --secondry-font: 'Poppins', sans-serif;
+}
+
+/*===================Header Section Starts================*/
+.head{
+   position: relative;
+}
+
+.navbar{
+	width: 100%;
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+   padding:5px 40px;
+   z-index: 3;
+}
+
+.head .logo{
+   height: 80px;
+   width: 80px;
+}
+
+.head .logo img{
+   height: 80px;
+   width: auto;
+}
+
+.menu{
+	border: var(--bdr1);
+	margin-left: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu ul{
+   display: flex;
+	flex-direction: row;
+	cursor: pointer;
+}
+
+.menu ul li{
+	list-style: none;
+	text-decoration: none;
+	margin:15px 15px;
+	padding:15px 15px;
+	position: relative;
+   transition: all 0.4s;
+}
+
+.menu ul li a{
+	font-family: var(--primary-font);
+	color: #000000;
+	font-size: 1rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.menu ul li:hover > a{
+   color: #290AF2;
+}
+
+.menu ul li i{
+	height: 20px;
+	width: 20px;
+   display: inline-flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.menu ul li ul{
+	opacity: 0;
+    display: inline-flex;
+	flex-direction: column;
+	overflow: hidden;
+	height: 0px;
+	position: absolute;
+	top: 40px;
+	left: -20px;
+	border-radius: 4px;
+	background: #000;
+	color: #fff;
+	z-index: 4;
+	padding: 20px 10px;
+	transition: all 0.5s;
+}
+
+.menu ul #team:hover > ul{
+	position: absolute;
+	opacity: 1;
+   height: 240px; 
+}
+
+.menu ul #more:hover > ul{
+	position: absolute;
+	opacity: 1;
+   height: 180px; 
+}
+
+.menu ul li ul li{
+	margin: 0 8px;
+	padding: 8px;
+	list-style: none;
+}
+
+.menu ul li ul li a{
+	color: #fff;
+	font-size: 0.9rem;
+	font-family: var(--primary-font);
+	text-decoration: none;
+}
+
+.menu ul li ul li:hover > a{
+   color: #ccc;
+}
+
+/*============= CSS for mobile responsive menu starts ======================*/
+
+.menubar{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	color: #000;
+	font-size: 2rem;
+	display: none;
+	z-index: 5;
+	cursor: pointer;
+}
+
+.sideNav{
+	 position: absolute;
+	 top: 0px;
+	 right: 0px;
+	 height: 100vh;
+	 width: 0px;
+	 background-color: #444;
+	 transition: 0.3s;
+	 transition-duration: 0.3s;
+	 overflow: hidden;
+	 position: fixed;
+	 z-index: 5;
+}
+
+.sideNav .outer{
+	margin-top: 20px;
+}
+
+.sideNav ul{
+	padding-left: 10px;
+	margin:0 20px;
+	cursor: pointer;
+}
+
+.sideNav ul li{
+	 list-style: none;
+	 line-height: 40px;
+	 font-weight: 500;
+	 font-family: var(--primary-font);
+}
+
+.sideNav ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.sideNav ul li a:hover{
+	 text-decoration: none;
+	 opacity: 0.8;
+}
+
+.sideNav ion-icon{
+	 margin-bottom: -3px;
+}
+
+/*close cross btn*/
+.sideNav #close ion-icon{
+	 font-size: 2rem;
+	 margin-left: 20px;
+	 margin-top: 20px;
+	 cursor: pointer;
+}
+
+.sideNav ul li ul li{
+	letter-spacing: 1px;
+	line-height: 30px;
+	font-size: 0.85rem;
+	font-family: var(--primary-font);
+}
+/*=============== CSS for mobile responsive menu ends ======================== */
+/*============navbar section ends=============
+============homepage section starts=========*/
+.homepage{
+   background-image: url("images/homeimg.jpg");
+   height: 84vh;
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.homepage .content{
+	width: 100%;
+	display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.homepage h1{
+	font-family: var(--primary-font);
+	font-size: 2.8rem;
+	text-shadow: 2px 20px 80px #eb0592,-2px -20px 80px #eb0592;
+	padding: 0 40px;
+	text-align: center;
+}
+
+.homepage p{
+	font-family: var(--secondry-font);
+	font-size: 1.5rem;
+	text-shadow: 2px 20px 40px #eb0592,-2px -20px 40px #eb0592;
+	padding: 0 40px;
+}
+
+.links{
+	margin-top: 1rem;
+	display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   padding: 0 40px;
+}
+
+ .links .myIcon{
+	margin: 1rem 1rem;
+	height: 2.8rem;
+	width: 2.8rem;
+	display: flex;
+   justify-content: center;
+   align-items: center;
+   background: #333;
+   border-radius: 100%;
+   position: relative;
+   transition: all 0.3s;
+}
+
+ .links .myIcon a{
+	text-decoration: none;
+}
+
+.links .myIcon a i{
+	color: #eee;
+	font-size: 1.8rem;
+	transition: all 0.3s;
+}
+
+.links .myIcon a .fa-phone{
+	font-size: 1.5rem;
+}
+
+.links .myIcon a .fa-envelope{
+	font-size: 1.6rem;
+}
+
+.links .myIcon a .fa-linkedin{
+	font-size: 1.6rem;
+}
+
+.links .myIcon:hover{
+	background: #000;
+}
+
+.links .myIcon:hover > a i{
+	color: #fff;
+}
+
+/*------goto top button css starts-----*/
+#topButton{
+   /* to show goto top button only on certain scroll using js*/
+   display: none; 
+}
+
+#topButton button{
+   height: 40px;
+   width: 40px;
+   position: absolute;
+   right: 20px;
+   bottom: 80px;
+   z-index: 2;
+   border-style: none;
+   border-radius: 100%;
+   background: #423f9c;
+   position: fixed;
+}
+
+#topButton button:focus{
+  outline-width: 0;
+}
+
+#topButton i{
+   font-size: 1.5rem;
+   background: #423f9c;
+   color: #fff;
+   border-radius: 100%;
+   padding: 4px;
+   transition: 0.3s;
+   transition-duration: 0.3s;
+}
+/*------goto top button css ends -----*/
+
+/*===============About US section started===================*/
+.aboutUs{
+  background:#E9EAEC;
+  padding: 20px 20px 40px 20px;
+}
+
+.titleText{
+  width: 100%;
+  color: #000;
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  padding: 40px 0;
+}
+
+.wrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.wrapper .outer{
+  height: 360px;
+  width: 40%;
+  position: relative;
+  padding-left: 20px;
+}
+
+.card{
+	height: 320px;
+	width: 320px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 5px;
+	box-shadow: 0 0 150px 10px #37E2D524,0 0 200px 25px #37E2D514;
+	overflow: hidden;
+}
+
+.card::before{
+	content: '';
+	position: absolute;
+	top: -60px;
+	left: 70px;
+	width: 180px;
+	height: 500px;
+	background: linear-gradient(#0ad3f2,#f20a67);
+	animation: animate3 5s linear infinite;
+}
+
+.card::after{
+	content: '';
+	position: absolute;
+	background: #fff;
+   inset: 4px;
+}
+
+@keyframes animate3{
+	0%{
+		transform: rotate(0deg);
+	}
+   
+  100%{
+  	  transform: rotate(360deg);
+  }
+}
+
+.card .image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.card img{
+	max-width: 100%;
+	max-height: auto;
+	z-index: 6;
+}
+
+.aboutText{
+	width: 40%;
+	color: #222;
+	font-family: var(--secondry-font);
+}
+
+.aboutText p{
+	font-size: 1rem;
+}
+
+/*==============About US Section ends and What we do starts====*/
+.activities{
+	background: #90ADC6;
+	padding: 20px;
+}
+
+.activities .wrapper{
+	margin-top: 20px;
+	padding-top: 40px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.card2{
+	margin: 15px;
+	height: auto;
+	max-width: 280px;
+	border-radius: 4px;
+	background: #E9EAEC;
+	position: relative;
+	box-shadow: 0 0 5px 1px #00000050,0 0 10px 1px #00000050;
+}
+
+.card2 .image{
+	height: 180px;
+	width: 100%;
+}
+
+.card2 .relative{
+   height: 200px;
+	width: 220px;
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	transform: translate(-50%);
+	background: url("images/president.jpg");
+	background-size: cover;
+	border-radius: 6px;
+	box-shadow: 0 0 4px 2px #495AF260,0 0 10px 6px #495AF240;
+}
+
+.card2 .text{
+	padding: 10px;
+}
+
+.card2 .text p{
+	font-family: var(--secondry-font);
+	margin: 8px 0;
+	font-size: 1rem;
+	text-align: center;
+}
+
+/*==========What we do section ends and Our President section starts=============*/
+#president .wrapper{
+	flex-direction: row-reverse;
+}
+
+#president .card img{
+	padding: 4px;
+}
+
+/*=============================================================
+=============Testimonial section starts====================*/
+.testimonial{
+    background: #fff;
+    color: #000;
+    padding-bottom: 60px;
+    padding-top: 10px;
+}
+
+.testimonial header{
+   padding-bottom: 0px;
+}
+
+.section-header h2{
+    font-family: var(--primary-font);
+    color: #000;
+}
+
+.section-header i{
+    color: var(--primary-color);
+}
+
+.sub-itm{
+	 padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.car-img{
+    height: 160px;
+    width: 160px;
+    background: var(--primary-color);
+}
+
+.car-content{
+    width: 80%;
+    margin-top: 20px;
+}
+
+.car-img img{
+   height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-bottom-right-radius: 60px;
+	border-top-left-radius: 60px;
+}
+
+.car-content h3{
+    font-family: var(--primary-font);
+}
+
+.car-content h5{
+    font-family: var(--primary-font);
+}
+
+.car-content p{
+    padding: 8px 40px 0px 40px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: var(--secondry-font);
+}
+
+/*=========testimonial section ends footer section starts===========*/
+.footer{
+	width: 100%;
+	background: url(images/footer.jpg);
+	background-size: 100% 100%;
+	background-position: center;
+}
+
+.footer .wrapper{
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 40px 0px 40px 20px;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer .about, .impLinks, .contact{
+   height: 100%;
+   max-width: 30%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+
+/*---------footer about-----------*/
+.footer .about{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.footer .about .logo{
+   height: 100px;
+   width: 100px;
+}
+
+.footer .about .logo img{
+   height: 100%;
+   width: 100%;
+   border-radius: 100%;
+}
+
+.footer .about .text{
+   font-size: 0.9rem;
+   margin-top: 5px;
+   padding: 10px;
+   padding-right: 20px;
+   text-align: justify;
+}
+
+.footer .about .text p{
+	font-family: var(--secondry-font);
+}
+
+/*-------footer important links--------*/
+.footer  h2{
+	font-family: var(--primary-font);
+}
+
+.footer .impLinks .links{
+	display: flex;
+	padding-left: 0;
+	flex-direction: column;
+}
+
+.footer .impLinks .links a{
+	width: 100%;
+	padding: 8px 20px;
+	font-size: 0.9rem;
+	color: #fff;
+	text-decoration: none;
+	font-family: var(--secondry-font);
+}
+
+.footer .impLinks .links a:hover{
+	opacity: 0.8;
+}
+
+/*------------footer contact----------*/
+.footer .contact h2{
+  margin-bottom: 10px;
+}
+
+.footer .phone, .mail, .address, .facebook{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.footer .phone a, .mail a, .address, .facebook{
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--secondry-font);
+}
+
+.footer .phone i, .mail i, .address i, .facebook i{
+  font-size: 1rem;
+  padding: 0 10px;
+}
+
+.footer .phone p, .mail p, .address p, .facebook p{
+  font-size: 1rem;
+  font-weight: 300;
+  }
+
+.footer .phone:hover, .mail:hover, .address:hover, .facebook:hover{
+  opacity: 0.8;
+}
+
+.footer .mail a{
+    word-break: break-word;
+}
+
+footer{
+height: 60px;
+width: 100%;
+background: #4e5c66;
+color: #eee;
+text-align: center;
+padding-top: 8px;
+font-size: 0.9rem;
+font-family: var(--secondry-font);
+}
+
+/*================CSS for Scrollbar Customization===========*/
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #495AF295;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff2890;
+}
+
+/*===========Media Queries for Responsive Design===========
+=========================================================*/
+@media screen and (max-width: 1090px) {
+.aboutText{
+	width: 50%;
+}
+}
+
+@media screen and (max-width: 972px) {
+.activities #last{
+	margin-top: 50px;
+}
+	.card2{
+		margin-bottom: 40px;
+	}
+	.activities{
+	padding-bottom: 0px;
+}
+.activities .wrapper{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+@media screen and (max-width: 900px) {
+.wrapper .outer{
+  height:360px;
+  width: 45%;
+}
+
+.card{
+	height: 300px;
+	width: 300px;
+}
+}
+
+@media screen and (max-width: 780px) {
+ /*footer*/
+ .footer .wrapper{
+   display: inline-flex;  
+ }
+
+.footer .wrapper .about{
+	max-width: 100%;
+	margin-bottom: 40px;
+}
+.footer .wrapper .impLinks{
+	max-width: 50%;
+}
+.footer .wrapper .contact{
+	max-width: 50%;
+}
+}
+
+.wrapper .outer{
+  height:360px;
+  width: 100%;
+}
+
+.card{
+	height: 320px;
+	width: 320px;
+}
+
+.aboutText{
+	padding: 60px;
+	width: 100%;
+}
+}
+
+@media screen and (max-width: 816px) {
+	.homepage{
+   height: 70vh;
+}
+	.menu ul li{
+	margin:15px 10px;
+	padding:15px 10px;
+}
+}
+
+@media screen and (max-width: 716px) {
+	.menu ul li{
+	margin:15px 8px;
+	padding:15px 8px;
+}
+}
+
+@media screen and (max-width: 680px) {
+ .activities #middle{
+	margin-top: 50px;
+}
+	.menu{
+		display: none;
+	}
+   
+   .menubar{
+   	display: block;
+   }
+
+   .homepage h1{
+	font-size: 2.5rem;
+}
+}
+
+@media screen and (max-width: 600px) {
+/*testimonials*/
+.sub-itm{
+display: inline-block;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.car-img{
+margin: 0px;
+padding: 0px;
+}
+
+.car-content p{
+padding: 0px 0px;
+}
+}
+
+@media screen and (max-width: 580px) {
+	.homepage{
+   height: 50vh;
+}
+.navbar{
+   padding:5px 20px;
+}
+
+.menubar{
+	right: 20px;
+}
+	.homepage h1{
+	font-size: 2rem;
+}
+
+.homepage p{
+	font-size: 1.2rem;
+}
+
+.links{
+	margin-top: 1rem;
+}
+
+ .links .myIcon{
+	margin: .5rem .5rem;
+	height: 2.4rem;
+	width: 2.4rem;
+}
+
+.links .myIcon a i{
+	font-size: 1.4rem;
+}
+
+.links .myIcon a .fa-phone{
+	font-size: 1.2rem;
+}
+
+.links .myIcon a .fa-envelope{
+	font-size: 1.2rem;
+}
+
+.links .myIcon a .fa-linkedin{
+	font-size: 1.2rem;
+}
+
+.aboutText{
+	padding:40px 0px 20px 0px;
+}
+/*goto top button*/
+	#topButton button{
+      right: 10px;
+      bottom: 70px;
+}
+}
+
+@media screen and (max-width: 480px) {
+/*testimonial */
+.car-content{
+    width: 90%;
+ }
+
+.car-content p{
+    padding: 8px 0px 0px 0px;
+ }
+
+/*footer*/
+.footer .wrapper .impLinks{
+	max-width: 100%;
+	margin-bottom: 40px;
+}
+.footer .wrapper .contact{
+	max-width: 100%;
+}
+}
