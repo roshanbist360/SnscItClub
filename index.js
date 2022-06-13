@@ -12,12 +12,6 @@
 
     // jquery     
     $(document).ready(function(){
-        // get scroll value so that various changes can be done on scroll
-        // for to appear navbar on scroll
-         window.addEventListener("scroll",function (event){
-             var scroll=scrollY;
-         });
-
         //Below js is for well working of go to top button
         $(window).scroll(function(){
            if($(this).scrollTop()>500){
