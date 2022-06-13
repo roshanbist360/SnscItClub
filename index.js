@@ -50,14 +50,14 @@
          })
 
          // <!-- for making text title auto typing -->
-          var typed = new Typed('.type', {
-          strings: ['ELCOME TO SNSC IT CLUB'],
-          typeSpeed: 100,
-          backSpeed:100,
-          loop:true,
-          backDelay: 1500,
-          showCursor: false,
-          });
+          // var typed = new Typed('.type', {
+          // strings: ['ELCOME TO SNSC IT CLUB'],
+          // typeSpeed: 100,
+          // backSpeed:100,
+          // loop:true,
+          // backDelay: 1500,
+          // showCursor: false,
+          // });
 
     });
 
