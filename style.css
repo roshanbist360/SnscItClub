@@ -892,9 +892,15 @@ padding: 0px 0px;
  }
 
 /*footer*/
+.footer .wrapper{
+   	justify-content: flex-start;
+	align-items: flex-start;
+}
+
 .footer .wrapper .impLinks{
 	max-width: 100%;
 	margin-bottom: 40px;
+	border: 1px solid yellow;
 }
 .footer .wrapper .contact{
 	max-width: 100%;
