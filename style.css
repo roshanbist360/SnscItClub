@@ -22,7 +22,9 @@ body{
 
 /*===================Header Section Starts================*/
 .head{
-   position: relative;
+	width: 100%;
+    position: fixed;
+    z-index: 10;
 }
 
 .navbar{
@@ -65,19 +67,19 @@ body{
 	margin:15px 15px;
 	padding:15px 15px;
 	position: relative;
-   transition: all 0.4s;
+    transition: all 0.4s;
 }
 
 .menu ul li a{
 	font-family: var(--primary-font);
 	color: #000000;
 	font-size: 1rem;
-	font-weight: 600;
+	font-weight: 700;
 	text-decoration: none;
 }
 
 .menu ul li:hover > a{
-   color: #290AF2;
+   color: #0263b3;
 }
 
 .menu ul li i{
@@ -104,6 +106,10 @@ body{
 	z-index: 4;
 	padding: 20px 10px;
 	transition: all 0.5s;
+	border-left: 2px solid #0ad3f2;
+	border-bottom: 2px solid #f20a67;
+	border-right: 2px solid #0ad3f2;
+	border-top: 2px solid #f20a67;
 }
 
 .menu ul #team:hover > ul{
@@ -214,7 +220,7 @@ body{
 ============homepage section starts=========*/
 .homepage{
    background-image: url("images/homeimg.jpg");
-   height: 84vh;
+   height: 100vh;
    background-size: cover;
    background-position: center center;
    background-repeat: no-repeat;
@@ -230,6 +236,7 @@ body{
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   padding-top: 100px;
 }
 
 .homepage h1{
@@ -263,7 +270,7 @@ body{
 	display: flex;
    justify-content: center;
    align-items: center;
-   background: #333;
+   background: #0C2D48;
    border-radius: 100%;
    position: relative;
    transition: all 0.3s;
@@ -292,46 +299,13 @@ body{
 }
 
 .links .myIcon:hover{
-	background: #000;
+	background: #0263b3;
 }
 
 .links .myIcon:hover > a i{
 	color: #fff;
+	transform: scale(0.9);
 }
-
-/*------goto top button css starts-----*/
-#topButton{
-   /* to show goto top button only on certain scroll using js*/
-   display: none; 
-}
-
-#topButton button{
-   height: 40px;
-   width: 40px;
-   position: absolute;
-   right: 20px;
-   bottom: 80px;
-   z-index: 2;
-   border-style: none;
-   border-radius: 100%;
-   background: #423f9c;
-   position: fixed;
-}
-
-#topButton button:focus{
-  outline-width: 0;
-}
-
-#topButton i{
-   font-size: 1.5rem;
-   background: #423f9c;
-   color: #fff;
-   border-radius: 100%;
-   padding: 4px;
-   transition: 0.3s;
-   transition-duration: 0.3s;
-}
-/*------goto top button css ends -----*/
 
 /*===============About US section started===================*/
 .aboutUs{
@@ -426,8 +400,12 @@ body{
 }
 
 /*==============About US Section ends and What we do starts====*/
+#activitiesTitle{
+    color: #fff;
+}
+
 .activities{
-	background: #90ADC6;
+	background: #0C2D48;
 	padding: 20px;
 }
 
@@ -464,7 +442,7 @@ body{
 	background: url("./images/activities.jpg");
 	background-size: cover;
 	border-radius: 6px;
-	box-shadow: 0 0 4px 2px #495AF260,0 0 10px 6px #495AF240;
+	box-shadow: 0 0 5px 1px #00000050,0 0 10px 1px #00000050;
 }
 
 .card2 .text{
@@ -490,7 +468,7 @@ body{
 /*=============================================================
 =============Testimonial section starts====================*/
 .testimonial{
-    background: #fff;
+    background: #ddd;
     color: #000;
     padding-bottom: 60px;
     padding-top: 10px;
@@ -550,6 +528,14 @@ body{
     font-size: 0.9rem;
     text-align: center;
     font-family: var(--secondry-font);
+}
+
+.owl-carousel  span {
+    background: #fff !important;
+} 
+
+.owl-carousel .active span {
+    background: #333652 !important;
 }
 
 /*=========testimonial section ends footer section starts===========*/
@@ -644,6 +630,7 @@ body{
   justify-content: flex-start;
   align-items: center;
   padding: 8px 10px;
+  font-size: 0.9rem;
   cursor: pointer;
 }
 
@@ -675,7 +662,7 @@ footer{
 height: 60px;
 width: 100%;
 background: #4e5c66;
-color: #eee;
+color: #fff;
 text-align: center;
 padding-top: 8px;
 font-size: 0.9rem;

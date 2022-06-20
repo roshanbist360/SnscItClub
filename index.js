@@ -8,24 +8,9 @@
     function closeNav(){
          document.getElementById('sideNavv').style.width="0px";
     }    
-
+    
 
     // jquery     
-    $(document).ready(function(){
-        //Below js is for well working of go to top button
-        $(window).scroll(function(){
-           if($(this).scrollTop()>500){
-               $('#topButton').fadeIn();
-           }
-           else{
-               $('#topButton').fadeOut(); 
-           }
-         });
-
-           $("#topButton").click(function(){
-           $('html','body').animate({scrollTop:0},400);
-        });
-
         // Testimonials carousel (uses the Owl Carousel library)
          $('.owl-carousel').owlCarousel({
          loop:true,
@@ -40,27 +25,42 @@
          0:{
          items:1
          },
-         600:{
-         items:1
+         780:{
+         items:2
          },
          1000:{
-         items:2
+         items:3
          }
          }
-         })
+         })          
+  
+   function getWidth(){
+       var width=$(document).width();
+       
+       if(width<540){
+        <!-- for stopping text  auto typing in small devices-->
+          var typed = new Typed('.type', {
+          strings: ['ELCOME TO SNSC IT CLUB'],
+          typeSpeed: 0,
+          backSpeed: 0,
+          loop: true,
+          backDelay: 1500000000000000000000000,  
+          showCursor: false,
+          });
+       }
 
-         // <!-- for making text title auto typing -->
-          // var typed = new Typed('.type', {
-          // strings: ['ELCOME TO SNSC IT CLUB'],
-          // typeSpeed: 100,
-          // backSpeed:100,
-          // loop:true,
-          // backDelay: 1500,
-          // showCursor: false,
-          // });
-
-    });
-
+       if(width>540){
+         <!-- for making text title auto typing -->
+          var typed = new Typed('.type', {
+          strings: ['ELCOME TO SNSC IT CLUB'],
+          typeSpeed: 120,
+          backSpeed:120,
+          loop:true,
+          backDelay: 1500,
+          showCursor: false,
+          });
+       }
+    }  
 
         
           
