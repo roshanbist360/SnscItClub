@@ -25,6 +25,7 @@ body{
 	width: 100%;
     position: fixed;
     z-index: 10;
+    box-shadow: 1px 1px 8px #444;
 }
 
 .navbar{
@@ -141,6 +142,9 @@ body{
    color: #ccc;
 }
 
+.activeMenu{
+	color: #f20a67!important;
+}
 /*============= CSS for mobile responsive menu starts ======================*/
 
 .menubar{
@@ -237,12 +241,12 @@ body{
    align-items: center;
    flex-direction: column;
    padding-top: 100px;
+   color: #0C2D48;
 }
 
 .homepage h1{
 	font-family: var(--primary-font);
 	font-size: 2.8rem;
-	text-shadow: 2px 20px 80px #eb0592,-2px -20px 80px #eb0592;
 	padding: 0 40px;
 	text-align: center;
 }
@@ -250,7 +254,6 @@ body{
 .homepage p{
 	font-family: var(--secondry-font);
 	font-size: 1.5rem;
-	text-shadow: 2px 20px 40px #eb0592,-2px -20px 40px #eb0592;
 	padding: 0 40px;
 }
 
@@ -298,13 +301,9 @@ body{
 	font-size: 1.6rem;
 }
 
-.links .myIcon:hover{
-	background: #0263b3;
-}
-
 .links .myIcon:hover > a i{
 	color: #fff;
-	transform: scale(0.9);
+	transform: scale(0.85);
 }
 
 /*===============About US section started===================*/
