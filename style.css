@@ -30,7 +30,7 @@ body{
 
 .navbar{
 	width: 100%;
-	background: #f2f2f2;
+	background: #fff;
 	display: flex;
 	flex-direction: row;
    padding:5px 40px;
