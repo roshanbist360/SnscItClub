@@ -25,6 +25,7 @@ body{
 	width: 100%;
     position: fixed;
     z-index: 10;
+    background: #dde7f0;
     box-shadow: 1px 1px 8px #444;
 }
 
