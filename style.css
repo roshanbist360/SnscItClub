@@ -25,13 +25,12 @@ body{
 	width: 100%;
     position: fixed;
     z-index: 10;
-    background: #dde7f0;
     box-shadow: 1px 1px 8px #444;
 }
 
 .navbar{
 	width: 100%;
-	background: #fff;
+	background: #f2f2f2;
 	display: flex;
 	flex-direction: row;
    padding:5px 40px;
