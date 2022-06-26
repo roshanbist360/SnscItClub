@@ -7,32 +7,7 @@
 
     function closeNav(){
          document.getElementById('sideNavv').style.width="0px";
-    }    
-    
-
-    // jquery     
-        // Testimonials carousel (uses the Owl Carousel library)
-         $('.owl-carousel').owlCarousel({
-         loop:true,
-         margin:10,
-         nav:false,
-         dots:true,
-         autoplay:true,
-         autoplaySpeed: 1000,
-         autoplayTimeout: 8000,
-         number:1,
-         responsive:{
-         0:{
-         items:1
-         },
-         780:{
-         items:2
-         },
-         1000:{
-         items:3
-         }
-         }
-         })          
+    }             
   
    function getWidth(){
        var width=$(document).width();
@@ -61,7 +36,20 @@
           });
        }
     }  
+        
 
+        // for events and notices view more and minimize
+       function showEventDetail(x){
+            document.getElementById('eventDetail'+x).style.display="block";
+            document.getElementById('minimize'+x).style.display="block";
+            document.getElementById('viewMore'+x).style.display="none";
+        }
+
+        function hideEventDetail(x){
+            document.getElementById('eventDetail'+x).style.display="none";           
+            document.getElementById('viewMore'+x).style.display="block";
+            document.getElementById('minimize'+x).style.display="none";
+        }
         
           
         
