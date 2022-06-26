@@ -37,19 +37,6 @@
        }
     }  
         
-
-        // for events and notices view more and minimize
-       function showEventDetail(x){
-            document.getElementById('eventDetail'+x).style.display="block";
-            document.getElementById('minimize'+x).style.display="block";
-            document.getElementById('viewMore'+x).style.display="none";
-        }
-
-        function hideEventDetail(x){
-            document.getElementById('eventDetail'+x).style.display="none";           
-            document.getElementById('viewMore'+x).style.display="block";
-            document.getElementById('minimize'+x).style.display="none";
-        }
         
           
         
