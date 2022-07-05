@@ -77,10 +77,11 @@ body{
 	font-size: 1rem;
 	font-weight: 700;
 	text-decoration: none;
+	opacity: 0.8;
 }
 
 .menu ul li:hover > a{
-   color: #0263b3;
+   opacity: 1;
 }
 
 .menu ul li i{
@@ -139,7 +140,7 @@ body{
 }
 
 .menu ul li ul li:hover > a{
-   color: #ccc;
+   opacity: 1;
 }
 
 .activeMenu{

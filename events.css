@@ -1,4 +1,4 @@
-.ourEvents{
+.eventsBody, .noticesBody{
 	background: #fff;
 }
 
@@ -19,7 +19,9 @@
 
 .cEvent, .uEvent{
 	padding: 20px;
-	background: #ddd;
+	margin: 40px 20px;
+	background: #eee;
+	border: 1px solid #26397a;
 }
 
 .cEvent .eventHead, .uEvent .eventHead{
@@ -61,8 +63,7 @@
 	display: none;
 }
 
-.relatedPhoto{
-   
+.relatedPhoto{  
    width: 100%;
    height: 420px;
    overflow: hidden;
